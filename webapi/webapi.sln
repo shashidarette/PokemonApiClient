@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Api", "Pokemon.Api.csproj", "{DC95F8F2-C493-4257-A96C-CAC51CF6D10E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokeman.Client", "..\PokemanClient\Pokeman.Client.csproj", "{203191C9-9055-4019-A3A3-9D96D5D6BDB9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokeman.Interfaces", "..\Pokeman.Interfaces\Pokeman.Interfaces.csproj", "{B8416CB3-B176-4FAA-A9ED-7A7FAC403CDE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokeman.DataModel", "..\Pokeman.DataModel\Pokeman.DataModel.csproj", "{92B2DACA-28CF-45A4-BCC9-A2AC46F05329}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonTranslation.Client", "..\PokemonTranslationClient\PokemonTranslation.Client.csproj", "{D6FA4F0E-28B5-4BFD-B71A-265DCA7B5449}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Client.Tests", "..\Pokemon.Client.Tests\Pokemon.Client.Tests.csproj", "{7F65D922-7820-4E93-85C8-D11C22F3725F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC95F8F2-C493-4257-A96C-CAC51CF6D10E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC95F8F2-C493-4257-A96C-CAC51CF6D10E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC95F8F2-C493-4257-A96C-CAC51CF6D10E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC95F8F2-C493-4257-A96C-CAC51CF6D10E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{203191C9-9055-4019-A3A3-9D96D5D6BDB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{203191C9-9055-4019-A3A3-9D96D5D6BDB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{203191C9-9055-4019-A3A3-9D96D5D6BDB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{203191C9-9055-4019-A3A3-9D96D5D6BDB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8416CB3-B176-4FAA-A9ED-7A7FAC403CDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8416CB3-B176-4FAA-A9ED-7A7FAC403CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8416CB3-B176-4FAA-A9ED-7A7FAC403CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8416CB3-B176-4FAA-A9ED-7A7FAC403CDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92B2DACA-28CF-45A4-BCC9-A2AC46F05329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92B2DACA-28CF-45A4-BCC9-A2AC46F05329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92B2DACA-28CF-45A4-BCC9-A2AC46F05329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92B2DACA-28CF-45A4-BCC9-A2AC46F05329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6FA4F0E-28B5-4BFD-B71A-265DCA7B5449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FA4F0E-28B5-4BFD-B71A-265DCA7B5449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6FA4F0E-28B5-4BFD-B71A-265DCA7B5449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FA4F0E-28B5-4BFD-B71A-265DCA7B5449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F65D922-7820-4E93-85C8-D11C22F3725F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F65D922-7820-4E93-85C8-D11C22F3725F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F65D922-7820-4E93-85C8-D11C22F3725F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F65D922-7820-4E93-85C8-D11C22F3725F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFC43EDE-C603-4CE6-A581-CDFA40CDFE06}
+	EndGlobalSection
+EndGlobal
