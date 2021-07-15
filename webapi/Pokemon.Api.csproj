@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PokemanClient\Pokeman.Client.csproj" />
+    <ProjectReference Include="..\PokemanClient\Pokemon.Client.csproj" />
   </ItemGroup>
 
 

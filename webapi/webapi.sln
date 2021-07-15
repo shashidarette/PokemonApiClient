@@ -5,17 +5,17 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Api", "Pokemon.Api.csproj", "{DC95F8F2-C493-4257-A96C-CAC51CF6D10E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokeman.Client", "..\PokemanClient\Pokeman.Client.csproj", "{203191C9-9055-4019-A3A3-9D96D5D6BDB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Client", "..\PokemanClient\Pokemon.Client.csproj", "{203191C9-9055-4019-A3A3-9D96D5D6BDB9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokeman.Interfaces", "..\Pokeman.Interfaces\Pokeman.Interfaces.csproj", "{B8416CB3-B176-4FAA-A9ED-7A7FAC403CDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Interfaces", "..\Pokeman.Interfaces\Pokemon.Interfaces.csproj", "{B8416CB3-B176-4FAA-A9ED-7A7FAC403CDE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokeman.DataModel", "..\Pokeman.DataModel\Pokeman.DataModel.csproj", "{92B2DACA-28CF-45A4-BCC9-A2AC46F05329}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.DataModel", "..\Pokeman.DataModel\Pokemon.DataModel.csproj", "{92B2DACA-28CF-45A4-BCC9-A2AC46F05329}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonTranslation.Client", "..\PokemonTranslationClient\PokemonTranslation.Client.csproj", "{D6FA4F0E-28B5-4BFD-B71A-265DCA7B5449}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Client.Tests", "..\Pokemon.Client.Tests\Pokemon.Client.Tests.csproj", "{7F65D922-7820-4E93-85C8-D11C22F3725F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Api.Tests", "..\Pokemon.Api.Tests\Pokemon.Api.Tests.csproj", "{4B0E4263-FB76-45C8-BF83-A3FFCAB80A8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Api.Tests", "..\Pokemon.Api.Tests\Pokemon.Api.Tests.csproj", "{4B0E4263-FB76-45C8-BF83-A3FFCAB80A8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
