@@ -7,7 +7,7 @@ using Pokemon.DataModel;
 
 namespace Pokemon.Client
 {
-    public class PokemonShakespeareClient : ITranslationClient
+    public class PokemonShakespeareClient : IShakespeareTranslation
     {
         HttpClient _translateClient = new HttpClient() { BaseAddress = new Uri("https://api.funtranslations.com/translate/") };
 

@@ -9,9 +9,16 @@ namespace Pokemon.Client
     public class PokemonApiClient : IPokemonClient
     {
         private const string CAVE_SPECIES = "cave";
+
         PokeApiClient pokeClient = new PokeApiClient();
-        PokemonYodaClient pokeYoda = new PokemonYodaClient();
-        PokemonShakespeareClient pokeShakes = new PokemonShakespeareClient();
+        private readonly IYodaTranslation _pokeYoda;
+        private readonly IShakespeareTranslation _pokeShakes;
+
+        public PokemonApiClient(IYodaTranslation pokeYoda, IShakespeareTranslation pokeShakes)
+        {
+            _pokeYoda = pokeYoda; 
+            _pokeShakes = pokeShakes;
+        }
 
         public async Task<PokemonInfo> GetPokeman(string name)
         {
@@ -24,20 +31,20 @@ namespace Pokemon.Client
         {
             PokeApiNet.Pokemon pok = await pokeClient.GetResourceAsync<PokeApiNet.Pokemon>(name);
             PokemonSpecies species = await pokeClient.GetResourceAsync(pok.Species);
-            string desc = string.Empty;           
-
-            if (species.Habitat.Name.Equals(CAVE_SPECIES, StringComparison.InvariantCultureIgnoreCase)  || species.IsLegendary)
+            string text = species.FlavorTextEntries[0].FlavorText;
+            string desc;
+            if (species.Habitat.Name.Equals(CAVE_SPECIES, StringComparison.InvariantCultureIgnoreCase) || species.IsLegendary)
             {
-                desc = await pokeYoda.GetPokemonTranslation(desc);
+                desc = await _pokeYoda.GetPokemonTranslation(text);
             }
             else
             {
-                desc = await pokeShakes.GetPokemonTranslation(desc);
+                desc = await _pokeShakes.GetPokemonTranslation(text);
             }
 
             if (string.IsNullOrEmpty(desc))
             {
-                desc = species.FlavorTextEntries[0].FlavorText;
+                desc = text;
             }
 
             return new PokemonInfo { name = pok.Name, description = desc, habitat = species.Habitat.Name, isLegendary = species.IsLegendary };
