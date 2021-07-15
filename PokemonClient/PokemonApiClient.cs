@@ -29,25 +29,24 @@ namespace Pokemon.Client
 
         public async Task<PokemonInfo> GetTranslatedPokeman(string name)
         {
-            PokeApiNet.Pokemon pok = await pokeClient.GetResourceAsync<PokeApiNet.Pokemon>(name);
-            PokemonSpecies species = await pokeClient.GetResourceAsync(pok.Species);
-            string text = species.FlavorTextEntries[0].FlavorText;
-            string desc;
-            if (species.Habitat.Name.Equals(CAVE_SPECIES, StringComparison.InvariantCultureIgnoreCase) || species.IsLegendary)
+            string translatedDesc;
+            PokemonInfo pokemon = await GetPokeman(name);
+
+            if (pokemon.habitat.Equals(CAVE_SPECIES, StringComparison.InvariantCultureIgnoreCase) || pokemon.isLegendary)
             {
-                desc = await _pokeYoda.GetPokemonTranslation(text);
+                translatedDesc = await _pokeYoda.GetPokemonTranslation(pokemon.description);
             }
             else
             {
-                desc = await _pokeShakes.GetPokemonTranslation(text);
+                translatedDesc = await _pokeShakes.GetPokemonTranslation(pokemon.description);
             }
 
-            if (string.IsNullOrEmpty(desc))
+            if (!string.IsNullOrEmpty(translatedDesc))
             {
-                desc = text;
+                pokemon.description = translatedDesc;
             }
 
-            return new PokemonInfo { name = pok.Name, description = desc, habitat = species.Habitat.Name, isLegendary = species.IsLegendary };
+            return pokemon;
         }
     }
 }
