@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pokeman.DataModel\Pokemon.DataModel.csproj" />
+    <ProjectReference Include="..\Pokemon.DataModel\Pokemon.DataModel.csproj" />
   </ItemGroup>
 
 </Project>

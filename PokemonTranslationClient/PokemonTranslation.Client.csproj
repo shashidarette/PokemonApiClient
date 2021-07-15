@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pokeman.Interfaces\Pokemon.Interfaces.csproj" />
+    <ProjectReference Include="..\Pokemon.DataModel\Pokemon.DataModel.csproj" />
+    <ProjectReference Include="..\Pokemon.Interfaces\Pokemon.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
