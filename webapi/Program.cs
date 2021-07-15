@@ -1,7 +1,11 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Pokedex.Controllers;
+using Pokemon.Client;
+using Pokemon.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,9 +22,12 @@ namespace Pokedex
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .ConfigureServices((_, services) =>
+                    services.AddScoped<IPokemonClient, PokemonApiClient>())
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
     }
 }
