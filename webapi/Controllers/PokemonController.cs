@@ -3,7 +3,7 @@ using Pokemon.Client;
 using Pokemon.DataModel;
 using System.Threading.Tasks;
 
-namespace webapi.Controllers
+namespace Pokedex.Controllers
 {
     [ApiController]
     public class PokemonController : ControllerBase
