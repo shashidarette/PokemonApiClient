@@ -8,6 +8,7 @@ namespace Pokemon.Client
 {
     public class PokemonApiClient : IPokemonClient
     {
+        private const string CAVE_SPECIES = "cave";
         PokeApiClient pokeClient = new PokeApiClient();
         PokemonYodaClient pokeYoda = new PokemonYodaClient();
         PokemonShakespeareClient pokeShakes = new PokemonShakespeareClient();
@@ -23,16 +24,20 @@ namespace Pokemon.Client
         {
             PokeApiNet.Pokemon pok = await pokeClient.GetResourceAsync<PokeApiNet.Pokemon>(name);
             PokemonSpecies species = await pokeClient.GetResourceAsync(pok.Species);
+            string desc = string.Empty;           
 
-            string desc = species.FlavorTextEntries[0].FlavorText;
-
-            if (species.Habitat.Name == "cave" || species.IsLegendary)
+            if (species.Habitat.Name.Equals(CAVE_SPECIES, StringComparison.InvariantCultureIgnoreCase)  || species.IsLegendary)
             {
                 desc = await pokeYoda.GetPokemonTranslation(desc);
             }
             else
             {
                 desc = await pokeShakes.GetPokemonTranslation(desc);
+            }
+
+            if (string.IsNullOrEmpty(desc))
+            {
+                desc = species.FlavorTextEntries[0].FlavorText;
             }
 
             return new PokemonInfo { name = pok.Name, description = desc, habitat = species.Habitat.Name, isLegendary = species.IsLegendary };
