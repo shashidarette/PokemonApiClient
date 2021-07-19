@@ -68,10 +68,14 @@ The solution file is available under webapi folder. It has several projects stru
 	- Moq is used to create mock behaviours for IPokemonClient
 	- Test can be improved to mock the behavior of translation clients too.
 
-# Instructions
+# WebApi url
+The REST API is publised as an app service on Azure and is available at the below location:
+https://pokemonapi.azurewebsites.net/pokemon/mewtwo
+
+# Build and Run Instructions
 * Using git client, clone the source code using the repo link.
 * Once source code is loaded, please install pre-requisites based on the development environment of choice.
 * If you are using Visual Studio, once the solution is opened Pokemon.API project should be setup as StartUp project. Run webapi project from by pressing F5.
 * If you are using Visual Studio code,  once the workspace is loaded and all relevant dependencies/extensions loaded. Run the application by pressing F5 or from the terminal type *dotnet run* command
 
-*TODO : deploy the webapi in a cloud environement.
+
