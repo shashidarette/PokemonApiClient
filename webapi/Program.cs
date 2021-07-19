@@ -23,7 +23,7 @@ namespace Pokedex
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((_, services) =>
-                    services.AddScoped<IPokemonClient, PokemonApiClient>()
+                    services.AddSingleton<IPokemonClient, PokemonApiClient>()
                             .AddSingleton<IYodaTranslation, PokemonYodaClient>()
                             .AddSingleton<IShakespeareTranslation, PokemonShakespeareClient>())
                 .ConfigureWebHostDefaults(webBuilder =>
