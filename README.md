@@ -78,4 +78,7 @@ https://pokemonapi.azurewebsites.net/pokemon/mewtwo
 * If you are using Visual Studio, once the solution is opened Pokemon.API project should be setup as StartUp project. Run webapi project from by pressing F5.
 * If you are using Visual Studio code,  once the workspace is loaded and all relevant dependencies/extensions loaded. Run the application by pressing F5 or from the terminal type *dotnet run* command
 
-
+* Items to be done for production
+	* Add api documentation page at the root and exception/error pages
+	* Error logging
+	* Caching for translation requests
