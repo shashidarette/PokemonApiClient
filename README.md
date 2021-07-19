@@ -20,6 +20,7 @@ It provides 2 end points as below:
 The API is built using .net core 3.1 frameowrk in Visual Studio 2019 IDE Version 16.10.3.
 The code can also be built and executed using Visual Studio Code Version 1.58 by opening .code-workspace file inside folder [.vscode]
 
+.net 3.1 SDK is required to build the source code.
 Please refer below documentation to setup environment for .net core 3.1 on windows:
 - https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=netcore31 &
 - https://dotnet.microsoft.com/download/dotnet/3.1
@@ -67,4 +68,10 @@ The solution file is available under webapi folder. It has several projects stru
 	- Moq is used to create mock behaviours for IPokemonClient
 	- Test can be improved to mock the behavior of translation clients too.
 
+# Instructions
+* Using git client, clone the source code using the repo link.
+* Once source code is loaded, please install pre-requisites based on the development environment of choice.
+* If you are using Visual Studio, once the solution is opened Pokemon.API project should be setup as StartUp project. Run webapi project from by pressing F5.
+* If you are using Visual Studio code,  once the workspace is loaded and all relevant dependencies/extensions loaded. Run the application by pressing F5 or from the terminal type *dotnet run* command
 
+*TODO : deploy the webapi in a cloud environement.
