@@ -17,8 +17,8 @@ It provides 2 end points as below:
 		- If none of the above 2 rules are applicable it returns the pokemon with default description i.e. without any translation.
 
 ## Framework or Libraries
-The API is built using .net core 3.1 frameowrk in Visual Studio 2019 IDE.
-The code can also be built and executed using Visual Studio Code by opening .code-workspace file inside folder [.vscode]
+The API is built using .net core 3.1 frameowrk in Visual Studio 2019 IDE Version 16.10.3.
+The code can also be built and executed using Visual Studio Code Version 1.58 by opening .code-workspace file inside folder [.vscode]
 
 Please refer below documentation to setup environment for .net core 3.1 on windows:
 - https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=netcore31 &
@@ -42,11 +42,29 @@ For Testing, xUnit v2.4.0 is used with below packages:
 	- To help handle asserts and object comparision efficiently.
    
 ## Solution Structure
-The solution file is available under webapi folder. It is structured as follows:
-* Pokemon.Api
+The solution file is available under webapi folder. It has several projects structured as below:
+- Pokemon.Api
+	- Core web api project, with end-points implemented by *PokemonController*.
+	- *PokemonController* uses IPokemonClient through DI.
+
 * Pokemon.Client
+	- contains *PokemonApiClient*, it is responsible to communicate with to communicate with Pokemon API using PokeApiNet v3.0.2.
+	- it also interfaces with *IYodaTranslation* and *IShakespeareTranslation* translation clients.
+	
 * PokemonTranslation.Client
+	- Contains PokemonYodaClient and PokemonShakespeareClient implemet relevant interface to perform respective translations using FunTranslation API
+	- The clients can be improved to provide caching to speedup response times.
+
 * Pokemon.Interfaces
+	- contains the interface definitions for PokeAPI and translation client.
+	- Used for dependency injection at the webapi level and mocking the object for unit testing.
+
 * Pokemon.DataModel
+	- contains data objects used to store pokemon information and translation responses from Fun Translations API.
+
 * Pokemon.Api.Tests
+	- Contains tests to verify the behaviour web api and pokemon.client components.
+	- Moq is used to create mock behaviours for IPokemonClient
+	- Test can be improved to mock the behavior of translation clients too.
+
 
