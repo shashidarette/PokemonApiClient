@@ -8,10 +8,10 @@ Pokedex REST API provides information about a given pokemon name. Current versio
 # REST API overview
 It provides 2 end points as below:
 - /pokemon/{name}
-	 - This end-point returns a pokemon JSON object with { name, description, habitat, isLegendary } fields.
+	 - Give a pokemon name, this end-point returns a pokemon JSON object with { name, description, habitat, isLegendary } fields.
 	 
 - /pokemon/translated/{name}
-	- This end-point in addition to the pokemon JSON object, translates pokemon's description with below rules.
+	- Give a pokemon name, this end-point in addition to the pokemon JSON object, translates the description with below rules.
 		- It applies Yoda translation if the pokemon habitat is rare or has legendary status
 		- It applies Shakespeare translation if the pokemon is not legendary
 		- If none of the above 2 rules are applicable it returns the pokemon with default description i.e. without any translation.

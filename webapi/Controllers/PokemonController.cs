@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Pokemon.DataModel;
 using Pokemon.Interfaces;
+using System.Collections.Generic;
 
 namespace Pokedex.Controllers
 {
@@ -22,6 +23,25 @@ namespace Pokedex.Controllers
         /// </summary>
         /// <param name="pokeApiClient"></param>
         public PokemonController(IPokemonClient pokeApiClient) => _pokeApiClient = pokeApiClient;
+
+        /// <summary>
+        /// API end point for the root : gives a brief information about the end-points available.
+        /// TODO: To generate swagger configuration and share the URL.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("pokemon")]
+        public List<string> Get()
+        {
+            List<string> apiInfo = new List<string>();
+
+            apiInfo.Add("This is a simple pokemon api REST API with following end-points:\n");
+            apiInfo.Add("/pokemon/{name} : Given a pokemon name, " +
+                "this end-point returns a pokemon JSON object with { name, description, habitat, isLegendary } fields.");
+            apiInfo.Add("/pokemon/translated/{name}:  Given pokemon name, " +
+                "this end-point in addition to the pokemon JSON object with translated description.");
+
+            return apiInfo;
+        }
 
         /// <summary>
         /// API end point : pokemon/{name}
