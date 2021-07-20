@@ -16,10 +16,19 @@ It provides 2 end points as below:
 		- It applies Shakespeare translation if the pokemon is not legendary
 		- If none of the above 2 rules are applicable it returns the pokemon with default description i.e. without any translation.
 
+# REST API url
+The REST API is published as an app service on Azure and is available at the below location:
+https://pokemonapi.azurewebsites.net/pokemon/mewtwo
+
 ## Framework or Libraries
 The API is built using .net core 3.1 framework in Visual Studio 2019 IDE Version 16.10.3.
-The code can also be built and executed using Visual Studio Code Version 1.58 by opening .code-workspace file inside folder [.vscode]
 
+The code can also be built and executed using Visual Studio Code Version 1.58 by opening .code-workspace file inside folder [.vscode]
+NOTE: VS code will require relevant packages to be configured such as:
+* OmniSharp for Windows (.NET 4.6 / x64)
+* .NET Core Debugger (Windows / x64)
+* C# extension and dependencies
+* 
 .net 3.1 SDK is required to build the source code.
 Please refer below documentation to setup environment for .net core 3.1 on windows:
 - https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=netcore31 &
@@ -68,15 +77,18 @@ The solution file is available under web-api folder. It has several projects str
 	- Moq is used to create mock behaviors for *IPokemonClient*
 	- Test can be improved to mock the behavior of translation clients too.
 
-# WebApi url
-The REST API is published as an app service on Azure and is available at the below location:
-https://pokemonapi.azurewebsites.net/pokemon/mewtwo
 
 # Build and Run Instructions
 * Using git client, clone the source code using the repo link.
 * Once source code is loaded, please install pre-requisites based on the development environment of choice.
-* If you are using Visual Studio, once the solution is opened Pokemon.API project should be setup as StartUp project. Run web-api project from by pressing F5.
-* If you are using Visual Studio code,  once the workspace is loaded and all relevant dependencies/extensions loaded. Run the application by pressing F5 or from the terminal type *dotnet run* command
+- If you are using Visual Studio, 
+	- Once the solution is opened Pokemon.API project should be setup as StartUp project
+	- Select webapi as the target project from by pressing F5.
+- If you are using Visual Studio code
+	- Once the workspace is loaded and all relevant dependencies/extensions loaded. 
+	- Select the workspace folder
+	- Start the application via Run menu or pressing F5 or from the terminal type
+	- You can also use powershell from the terminal, from webapi folder within workspace execute *dotnet run* command 
 
 # Items to be done for production
 	* Add api documentation page at the root using Swagger UI
