@@ -7,10 +7,22 @@ using Pokemon.DataModel;
 
 namespace Pokemon.Client
 {
+    /// <summary>
+    /// PokemonShakespeareClient implements IShakespeareTranslation
+    /// </summary>
     public class PokemonShakespeareClient : IShakespeareTranslation
     {
+        /// <summary>
+        /// Http client to interact with Fun Translations API
+        /// </summary>
         HttpClient _translateClient = new HttpClient() { BaseAddress = new Uri("https://api.funtranslations.com/translate/") };
 
+        /// <summary>
+        /// Gets the Shakespeare Translation for the given data
+        /// If translation not found, returns null
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public async Task<string> GetPokemonTranslation(string data)
         {
             using var request = new HttpRequestMessage(HttpMethod.Post, "/translate/shakespeare.json");

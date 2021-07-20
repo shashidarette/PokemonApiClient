@@ -7,10 +7,20 @@ using Pokemon.DataModel;
 
 namespace Pokemon.Client
 {
+    /// <summary>
+    /// PokemonYodaClient implements IYodaTranslation
+    /// </summary>
     public class PokemonYodaClient : IYodaTranslation
     {
+        /// <summary>
+        /// Http client to interact with Fun Translations API
+        /// </summary>
         HttpClient _translateClient = new HttpClient() { BaseAddress = new Uri("https://api.funtranslations.com/translate/") };
 
+        /// <summary>
+        /// Gets the Yoda Translation for the given data
+        /// If translation not found, returns null
+        /// </summary>
         public async Task<string> GetPokemonTranslation(string data)
         {
             using var request = new HttpRequestMessage(HttpMethod.Post, "/translate/yoda.json");

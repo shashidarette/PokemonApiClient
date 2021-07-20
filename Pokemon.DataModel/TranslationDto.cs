@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Pokemon.DataModel
 {
+    /// <summary>
+    /// Translation DTO objects used for FunTranslation
+    /// </summary>
     public class TranslationDto
     {
         public Success success { get; set; }
