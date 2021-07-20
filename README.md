@@ -53,7 +53,7 @@ The solution file is available under web-api folder. It has several projects str
 	- it also interfaces with *IYodaTranslation* and *IShakespeareTranslation* translation clients.
 	
 * PokemonTranslation.Client
-	- Contains PokemonYodaClient and PokemonShakespeareClient implement relevant interface to perform respective translations using FunTranslation API
+	- Contains *PokemonYodaClient* and *PokemonShakespeareClient* implement relevant interface to perform respective translations using FunTranslation API
 	- The clients can be improved to provide caching to speedup response times.
 
 * Pokemon.Interfaces
@@ -65,7 +65,7 @@ The solution file is available under web-api folder. It has several projects str
 
 * Pokemon.Api.Tests
 	- Contains tests to verify the behavior web api and pokemon.client components.
-	- Moq is used to create mock behaviors for IPokemonClient
+	- Moq is used to create mock behaviors for *IPokemonClient*
 	- Test can be improved to mock the behavior of translation clients too.
 
 # WebApi url
@@ -75,7 +75,7 @@ https://pokemonapi.azurewebsites.net/pokemon/mewtwo
 # Build and Run Instructions
 * Using git client, clone the source code using the repo link.
 * Once source code is loaded, please install pre-requisites based on the development environment of choice.
-* If you are using Visual Studio, once the solution is opened Pokemon.API project should be setup as StartUp project. Run webapi project from by pressing F5.
+* If you are using Visual Studio, once the solution is opened Pokemon.API project should be setup as StartUp project. Run web-api project from by pressing F5.
 * If you are using Visual Studio code,  once the workspace is loaded and all relevant dependencies/extensions loaded. Run the application by pressing F5 or from the terminal type *dotnet run* command
 
 # Items to be done for production
